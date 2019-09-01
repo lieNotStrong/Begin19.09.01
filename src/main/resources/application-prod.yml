@@ -1,0 +1,44 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /springboot
+limit:
+  min-money: 0.01
+  max-money: 200
+  desc: 最小值${limit.min-money}最大值${limit.max-money}
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://39.96.161.245:3306/business
+      username: lie
+      password: Lie1998..
+      max-active: 20
+      max-wait: 6000
+      min-idle: 1
+      test-on-borrow: true
+      test-on-return: true
+  thymeleaf:
+    mode: HTML
+
+mybatis:
+  mapper-locations: classpath*:com/neuedu/mapper/*Mapper.xml
+  config-location: classpath:mybatis-config.xml
+
+
+## redis连接池的配置
+redis:
+  max:
+    total: 8
+    idel: 8
+  min:
+    idel: 2
+  test:
+    borrow: true
+    return: true
+  timeout: 2000
+  ip: 39.96.161.245
+  port: 5379
+  password: Lie1998..
