@@ -2,6 +2,7 @@ package com.neuedu.api_practice;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class StringApi {
@@ -255,7 +256,13 @@ public class StringApi {
          * */
 
         long l = System.currentTimeMillis();
+        Date date = new Date();
+        System.out.println(date);
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(simpleDateFormat.format(l));
+
+
+
 
 
 
